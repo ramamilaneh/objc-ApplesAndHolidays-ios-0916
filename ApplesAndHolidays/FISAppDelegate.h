@@ -5,11 +5,15 @@
 @interface FISAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+-(NSArray *)pickApplesFromFruits:(NSArray *)fruits;
+-(NSArray *)holidaysInSeason:(NSString *)season inDatabase:(NSDictionary *)database;
+-(NSArray *)suppliesInHoliday:(NSString *)holiday inSeason:(NSString *)season inDatabase:(NSDictionary *)database;
+-(BOOL)holiday:(NSString *)holiday inSeason:(NSString *)season inDatabase:(NSDictionary *)database;
 
-/**
- 
- * Declare your methods here.
- 
- */
+-(BOOL)supply:(NSString *)supply inHoliday:(NSString *)holiday inSeason:(NSString *)season inDatabase:(NSDictionary *)database;
+
+-(NSDictionary *)addHoliday:(NSString *)holiday toSeason:(NSString *)season inDatabase:(NSDictionary *)database;
+
+-(NSDictionary *)addSupply:(NSString *)supply toHoliday:(NSString *)holiday inSeason:(NSString *)season inDatabase:(NSDictionary *)database;
 
 @end
